@@ -72,20 +72,24 @@ values=args.values
 x = values[0]
 y = values[1]
 z=0
-
+act=''
 
 if args.action=='+':
     z=x + y
+    act='+'
 elif args.action=='-':
     z=x - y
+    act='-'
 elif args.action=='"*"' or args.action=="'*'" or args.action=='\*':
     z=x * y
+    act='*'
 elif args.action=='/':
     z=x / y    
-    
+    act='/'
+
 
 # выводим значения
 if args.verbose:
-    print (x,args.action,y,'=',z)
+    print(x,act,y,'=',z)
 else:
     print (z)
